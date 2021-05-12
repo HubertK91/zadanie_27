@@ -5,23 +5,14 @@
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
          https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
 
-    <changeSet author="hkowalski" id="001-init">
-
-        <createTable tableName="user">
-            <column name="id" type="bigint" autoIncrement="true">
-                <constraints primaryKey="true"/>
-            </column>
-
-            <column name="first_name" type="varchar(255)"/>
-
-            <column name="last_name" type="varchar(255)"/>
-
-            <column name="date_birth" type="date">
+    <changeSet author="hkowalski" id="002-additionalFunctions">
+        <addColumn tableName="user">
+            <column name="user_mail" type="varchar(255)"></column>
+        </addColumn>
+        <addColumn tableName="user">
+            <column name="newsletter" type="boolean" defaultValueBoolean="true">
                 <constraints nullable="false"/>
             </column>
-        </createTable>
-
+        </addColumn>
     </changeSet>
-
-
 </databaseChangeLog>

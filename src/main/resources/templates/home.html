@@ -20,6 +20,8 @@
             <th scope="col">imię</th>
             <th scope="col">nazwisko</th>
             <th scope="col">data urodzenia</th>
+            <th scope="col">email</th>
+            <th scope="col">newsletter</th>
         </tr>
         </thead>
         <tbody>
@@ -28,6 +30,8 @@
             <td th:text="${user.firstName}"></td>
             <td th:text="${user.lastName}"></td>
             <td th:text="${user.dateBirth}"></td>
+            <td th:text="${user.userMail}"></td>
+            <td th:text="${user.newsletter}"></td>
         </tr>
         </tbody>
     </table>

@@ -19,6 +19,24 @@ public class User {
     private String lastName;
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate dateBirth;
+    private String userMail;
+    private boolean newsletter;
+
+    public String getUserMail() {
+        return userMail;
+    }
+
+    public void setUserMail(String userMail) {
+        this.userMail = userMail;
+    }
+
+    public boolean isNewsletter() {
+        return newsletter;
+    }
+
+    public void setNewsletter(boolean newsletter) {
+        this.newsletter = newsletter;
+    }
 
     public Long getId() {
         return id;

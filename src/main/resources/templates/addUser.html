@@ -7,6 +7,9 @@
           integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 </head>
 <body>
+<div style="background: aliceblue; width: 100%; height: 50px;">
+    <a style="padding: 10px" href="/">Strona główna</a>
+</div>
 <h2 style="margin-left: 50px">Dodawanie użytkownika</h2>
 <section>
     <form method="post" th:action="@{/add}"
@@ -21,7 +24,26 @@
         </div>
         <div class="mb-3" style="max-width: 700px">
             <label for="dateBirth" class="form-label">Data urodzenia</label>
-            <input type="text" th:field="*{dateBirth}" class="form-control" id="dateBirth" placeholder="Data urodzenia">
+            <input type="date" th:field="*{dateBirth}" class="form-control" id="dateBirth" placeholder="Data urodzenia">
+        </div>
+        <div class="mb-3" style="max-width: 700px">
+            <label for="email" class="form-label">Email</label>
+            <input type="text" th:field="*{userMail}" class="form-control" id="email" placeholder="Email">
+        </div>
+        <div class="mb-3" style="max-width: 700px">
+            <div>Newsletter</div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" th:value="true" th:field="*{newsletter}" id="true" checked>
+                <label class="form-check-label" for="true">
+                    Tak
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" th:value="false" th:field="*{newsletter}" id="false">
+                <label class="form-check-label" for="false">
+                    Nie
+                </label>
+            </div>
         </div>
         <div class="mb-3" style="max-width: 700px">
             <input type="submit" value="Dodaj użytkownika">
